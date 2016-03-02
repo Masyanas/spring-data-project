@@ -1,0 +1,17 @@
+# Java binaries
+*.class
+*.war
+*.jar
+*.ear
+*/target/*
+
+# IDEA trash
+/.idea/
+*.iml
+*.classpath
+application/app-api/.project
+application/app-impl/.project
+application/app-web/.project
+application/app-api/target
+application/app-impl/target
+application/app-web/target
