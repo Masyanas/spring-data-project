@@ -1,2 +1,0 @@
-Spring + Hibernate + Maven + hsqldb + Tomcat project
-run "java -cp hsqldb.jar org.hsqldb.util.DatabaseManager" before deploying project on Tomcat
