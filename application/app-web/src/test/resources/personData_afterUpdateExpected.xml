@@ -1,0 +1,11 @@
+<dataset>
+    <person id="1"
+            name="Gregoriy"
+            surname="Petrosyan" />
+    <person id="2"
+            name="Petr"
+            surname="Petrov" />
+    <person id="3"
+            name="Sidr"
+            surname="Sidrov" />
+</dataset>
