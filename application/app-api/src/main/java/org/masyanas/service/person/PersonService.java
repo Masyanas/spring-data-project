@@ -12,6 +12,10 @@ public interface PersonService
 
     Person findById(final Long personId);
 
+    List<Person> findByName(final String name);
+
+    List<Person> findBySurname(final String surname);
+
     Person create(Person person);
 
     Person update(Person person);

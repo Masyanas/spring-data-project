@@ -11,6 +11,10 @@ public interface PersonLightWeightService
 
     PersonOutDTO findById(final Long personId);
 
+    List<PersonOutDTO> findByName(final String name);
+
+    List<PersonOutDTO> findBySurname(final String surname);
+
     List<PersonOutDTO> findAll();
 
     PersonOutDTO create(final PersonInDTO personInDTO);

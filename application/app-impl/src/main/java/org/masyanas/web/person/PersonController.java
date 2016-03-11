@@ -23,6 +23,18 @@ public class PersonController
         return personLightWeightService.findById(personId);
     }
 
+    @RequestMapping(value = "{name}", method = RequestMethod.GET)
+    public List<PersonOutDTO> findByName(@PathVariable(value = "name") String name)
+    {
+        return personLightWeightService.findByName(name);
+    }
+
+    @RequestMapping(value = "{surname}", method = RequestMethod.GET)
+    public List<PersonOutDTO> findBySurname(@PathVariable(value = "surname") String surname)
+    {
+        return personLightWeightService.findBySurname(surname);
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     public List<PersonOutDTO> findAll()
     {

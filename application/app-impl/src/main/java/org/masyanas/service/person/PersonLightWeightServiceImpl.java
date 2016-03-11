@@ -27,6 +27,18 @@ public class PersonLightWeightServiceImpl implements PersonLightWeightService
     }
 
     @Override
+    public List<PersonOutDTO> findByName(String name)
+    {
+        return personDTOFactory.createListOutDTO(personService.findByName(name));
+    }
+
+    @Override
+    public List<PersonOutDTO> findBySurname(String surname)
+    {
+        return personDTOFactory.createListOutDTO(personService.findBySurname(surname));
+    }
+
+    @Override
     public List<PersonOutDTO> findAll()
     {
         return personDTOFactory.createListOutDTO(personService.findAll());
@@ -50,7 +62,7 @@ public class PersonLightWeightServiceImpl implements PersonLightWeightService
 
         personDTOFactory.updateModel(personInDTO, person);
 
-        return personDTOFactory.createOutDTO(person);
+        return personDTOFactory.createOutDTO(personService.update(person));
 
     }
 

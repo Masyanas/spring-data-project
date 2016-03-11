@@ -33,18 +33,32 @@ public class PersonServiceImpl implements PersonService
     }
 
     @Override
+    public List<Person> findByName(String name)
+    {
+        LOGGER.debug("... find Person (name={})", name);
+        return personRepository.findByName(name);
+    }
+
+    @Override
+    public List<Person> findBySurname(String surname)
+    {
+        LOGGER.debug("... find Person (surname={})", surname);
+        return personRepository.findBySurname(surname);
+    }
+
+    @Override
     public Person create(Person person)
     {
         LOGGER.debug("... create new Person ({})", person);
-        personRepository.save(person);
-        return person;
+        return personRepository.save(person);
     }
 
     @Override
     public Person update(Person person)
     {
         LOGGER.debug("... update Person (id={})", person.getId());
-        return personRepository.updateById(person.getId(), person.getName(), person.getSurname());
+        personRepository.updateById(person.getId(), person.getName(), person.getSurname());
+        return person;
     }
 
     @Override

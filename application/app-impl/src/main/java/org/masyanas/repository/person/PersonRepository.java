@@ -28,7 +28,7 @@ public interface PersonRepository extends JpaRepository<Person, Long>
     @Modifying
     @Transactional
     @Query("update Person p set p.name = :name, p.surname = :surname where p.id = :id")
-    Person updateById(@Param("id") Long id, @Param("name") String name, @Param("surname") String surname);
+    void updateById(@Param("id") Long id, @Param("name") String name, @Param("surname") String surname);
 
     @Modifying
     @Transactional
