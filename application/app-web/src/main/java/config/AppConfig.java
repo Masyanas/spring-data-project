@@ -1,8 +1,6 @@
 package config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.*;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -18,7 +16,8 @@ import javax.sql.DataSource;
 
 
 @Configuration
-@ImportResource({"classpath*:spring/application-context.xml"})
+@Import(SpringAOPConfig.class)
+//@ImportResource({"classpath*:spring/application-context.xml"})
 @EnableJpaRepositories(basePackages = {
         "org.masyanas.repository",
 })
